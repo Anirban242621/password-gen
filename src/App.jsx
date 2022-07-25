@@ -185,7 +185,7 @@ function App() {
           <a
             href="https://anirban-majumdar-97.vercel.app/"
             target="_blank"
-            style={{ color: "black" }}
+            style={{ color: "#fff" }}
           >
             Anirban K Majumdar
           </a>
