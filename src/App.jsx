@@ -99,77 +99,99 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <div className="generator">
-        <h2 className="generator_header">Password Generator</h2>
+    <>
+      <div className="container">
+        <div className="generator">
+          <h2 className="generator_header">Password Generator</h2>
 
-        <div className="generator_password">
-          {password}
-          <button
-            className="generator_passwordGenerateBtn"
-            ref={copyBtn}
-            onClick={handleCopy}
-          >
-            <FaClipboard />
+          <div className="generator_password">
+            {password}
+            <button
+              className="generator_passwordGenerateBtn"
+              ref={copyBtn}
+              onClick={handleCopy}
+            >
+              <FaClipboard />
+            </button>
+          </div>
+          <div className="form-group">
+            <label htmlFor="password-length">Password Length</label>
+            <input
+              name="password-length"
+              id="password-length"
+              type="number"
+              max="20"
+              min="7"
+              defaultValue={passwordLength}
+              onChange={(e) => setPasswordLength(e.target.value)}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="uppercase-letters">Include Uppercase</label>
+            <input
+              name="uppercase-letters"
+              id="uppercase-letters"
+              type="checkbox"
+              checked={uppercase}
+              onChange={(e) => setUpperCase(e.target.checked)}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="lowercase-letters">Include Lowercase</label>
+            <input
+              name="lowercase-letters"
+              id="lowercase-letters"
+              type="checkbox"
+              checked={lowercase}
+              onChange={(e) => setLowerCase(e.target.checked)}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="include-numbers">Include Number</label>
+            <input
+              name="include-numbers"
+              id="include-numbers"
+              type="checkbox"
+              checked={numbers}
+              onChange={(e) => setNumbers(e.target.checked)}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="include-symbols">Include Symbols</label>
+            <input
+              name="include-symbols"
+              id="include-symbols"
+              type="checkbox"
+              checked={symbols}
+              onChange={(e) => setSymbols(e.target.checked)}
+            />
+          </div>
+          <button className="generator_btn" onClick={handleGeneratorPassword}>
+            Generate New Password
           </button>
         </div>
-        <div className="form-group">
-          <label htmlFor="password-length">Password Length</label>
-          <input
-            name="password-length"
-            id="password-length"
-            type="number"
-            max="20"
-            min="7"
-            defaultValue={passwordLength}
-            onChange={(e) => setPasswordLength(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="uppercase-letters">Include Uppercase</label>
-          <input
-            name="uppercase-letters"
-            id="uppercase-letters"
-            type="checkbox"
-            checked={uppercase}
-            onChange={(e) => setUpperCase(e.target.checked)}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="lowercase-letters">Include Lowercase</label>
-          <input
-            name="lowercase-letters"
-            id="lowercase-letters"
-            type="checkbox"
-            checked={lowercase}
-            onChange={(e) => setLowerCase(e.target.checked)}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="include-numbers">Include Number</label>
-          <input
-            name="include-numbers"
-            id="include-numbers"
-            type="checkbox"
-            checked={numbers}
-            onChange={(e) => setNumbers(e.target.checked)}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="include-symbols">Include Symbols</label>
-          <input
-            name="include-symbols"
-            id="include-symbols"
-            type="checkbox"
-            checked={symbols}
-            onChange={(e) => setSymbols(e.target.checked)}
-          />
-        </div>
-        <button className="generator_btn" onClick={handleGeneratorPassword}>
-          Generate New Password
-        </button>
       </div>
-    </div>
+      <div
+        style={{
+          textAlign: "center",
+          position: "unset",
+          paddingTop: "50px",
+          fontSize: "19px",
+        }}
+      >
+        Design and developed by 🧔🏻
+        <br />
+        <b>
+          <a
+            href="https://anirban-majumdar-97.vercel.app/"
+            target="_blank"
+            style={{ color: "black" }}
+          >
+            Anirban K Majumdar
+          </a>
+        </b>
+      </div>
+    </>
   );
 }
 
