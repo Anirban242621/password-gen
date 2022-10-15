@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+}
+
+// @font-face {
+//     font-family: 'Open Sans';
+//     src: url(path/to/file) format(Example: 'truetype' or 'opentype' depending on the file extension of your font);
+// }
+
+// USAGE
+// body {
+//     font-family: 'Open Sans', sans-serif;
+// }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+#root {
+  min-height: 100vh;
+  // background: #3b3b98;
+  background-image: url("../src/assets/background.svg");
+  background-position: center;
+}
+.container {
+  width: 30vw;
+  margin: 0 auto;
+  padding-top: 30vh;
+}
+
+@media only screen and (max-width: 1200px){
+  /*Tablets [601px -> 1200px]*/
+  .container {
+    width: 40vw;
+    padding-top: 20vh;
+    }
+}
+@media only screen  and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+  .container {
+  width: 90vw;
+  padding-top: 20vh;
+  }
+}
+.generator {
+  // border-radius: 3px;
+  border-radius: 111px 42px 112px 42px;
+-moz-border-radius: 111px 42px 112px 42px;
+-webkit-border-radius: 111px 42px 112px 42px;
+border: 0px solid #000000;
+  background: #23235b;
+  
+  -webkit-box-shadow: 0px 0px 61px 0px rgba(186, 178, 248, 0.2);
+  -moz-box-shadow: 0px 0px 61px 0px rgba(186, 178, 248, 0.2);
+  box-shadow: 0px 0px 61px 0px rgba(186, 178, 248, 0.2);
+  padding: 20px;
+  &_header {
+    text-align: center;
+    color: #DFD5A5;
+    margin-bottom: 20px;
+  }
+  &_password {
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 13px 10px;
+    color: #DFD5A5;
+    margin-bottom: 15px;
+    border-radius: 18px;
+    height: 45px;
+    &GenerateBtn {
+      position: absolute;
+      background: #3b3b98;
+      color: #DFD5A5;
+      border: none;
+      padding: 10px;
+      height: 40px;
+      top: 2px;
+      right: 2px;
+      cursor: pointer;
+      border-radius: 18px;
+    }
+  }
+  &_btn {
+    background: #3b3b98;
+    border: none;
+    border-radius: 20px;
+    display: block;
+    width: 60%;
+    padding: 10px;
+    color: #DFD5A5;
+    font-size: 17px;
+    cursor: pointer;
+  }
+}
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  color: #DFD5A5;
+  margin-bottom: 5px;
+  input[type="number"] {
+    width: 40px;
+  }
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
+  label {
+    cursor: pointer;
+    user-select: none;
+  }
+}
